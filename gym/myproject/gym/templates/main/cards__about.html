@@ -1,0 +1,26 @@
+{%extends 'main/base.html'%}
+{%load static%}
+{%block content%}
+
+
+    <div class="image-wrapper">
+        {% if cr.image %}
+            <img src="{{cr.image.url}}" alt="" srcset="">
+        {% endif %}
+    
+        <div class="wrap">
+            <div class="container-about-classes">
+                <div class="classes-title">
+                    <h2>{{cr.title}}</h2>
+                </div>
+                <div class="classes-desc">
+                    <p>{{cr.description}}</p></div>
+            </div>
+            <div class="wrapper-all-about">
+                
+                <div class="desc-wrapper">{{cr.area_of_text}}</div>
+            </div>
+        </div>
+    </div>
+
+{%endblock%}

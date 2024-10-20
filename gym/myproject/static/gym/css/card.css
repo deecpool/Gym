@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+
+}
+.description-second__section img{
+    position: absolute;
+    z-index: -1;
+    background: transparent;
+    opacity: .3;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+.description-second__sec{
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: auto;
+}
+.desc-card__title{
+    font-size: 64px;
+    margin-top: 20vh;
+}
+.description-second__sec p{
+    font-size: 44px;
+}
+.wrapper-ad{
+    padding-top: 230px;
+    width: 65%;
+    margin: auto;
+    padding-bottom: 35px;
+    border-bottom: 1px solid;
+}
+.main-container-card-sec{
+    margin-top: 45px;
+    background-color: rgb(231, 231, 231);
+    border-bottom: 1px solid;
+
+}
+.price-list{
+    width: 5%;
+}
+.container-card-sec{
+    width: 65%;
+    margin: auto;
+    padding-top: 35px;
+    display: flex;
+
+}
+.img-sec{
+    
+    width: 20%;
+    margin-right: 20px;
+}
+.img-sec img{
+    width: 100%;
+}
+.title-card-sec{
+    font-size: 14px;
+    font-weight: 700px;
+    margin-right: 20px;
+    width: 9%;
+}
+.description-card-sec{
+    width: 40%;
+    margin-right: 20px;
+}
+.link-buy a{
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    text-decoration: none;
+}
+.link-buy a:hover{
+    padding: 14px;
+    background-color: aliceblue;
+    color: black;
+    transition: all ease .2s;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1100px)  {
+
+    
+
+    
+}

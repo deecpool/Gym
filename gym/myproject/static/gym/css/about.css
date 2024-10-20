@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #ebebeb;
+}
+*{
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about{
+    height: 100%;
+}
+
+.img img{
+    
+    position: absolute;
+    z-index: -1;
+    height: 600px;
+    opacity: 0.2;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.container-description-about{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 240px;
+    
+    overflow: hidden;
+}
+
+
+.container-description-about h1{
+    
+    font-size: 64px;
+    color: rgb(49, 36, 36);
+}
+.container-description-about p{
+   
+    font-size: 54px;
+    padding-top: 30px;
+    color: rgb(58, 45, 45);
+}
+
+.card-section-ab{
+    padding-top: 3%;
+    width: 70%;
+    margin: 0 auto;
+}
+.cards-ab{
+    margin-bottom: 100px;
+    
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+}
+.card-ab {
+    
+    width: 90%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-image-ab {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-image-ab img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-text-ab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .card-text-ab h3,p{
+    max-width: 70%;
+  }
+  .card-ab:hover .card-image-ab {
+    transform: scale(1.1);
+  }
+  
+  .card-ab:hover .card-text-ab {
+    opacity: 1;
+  }
+
+
+
+
+
+
+
+@media (max-width:1860px) {
+    
+
+
+   
+}
+
+
+@media (max-width:1260px) {
+    .img img{
+        width: 100%;
+        height: 900px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+    .cards-ab{
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+
+
+}
+
+@media (max-width:560px){
+    .img img{
+        width: 100%;
+        height: 1000px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+    .container-description-about h1{
+    
+        font-size: 46px;
+        color: rgb(49, 36, 36);
+    }
+    .container-description-about p{
+       
+        font-size: 35px;
+        padding-top: 30px;
+        color: rgb(58, 45, 45);
+    }
+    .cards-ab{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+}

@@ -1,0 +1,43 @@
+{%extends 'main/base.html'%}
+{%load static%}
+
+
+{%block content%}
+    <section class="description-second__section">
+        <div class="img-desc-sec"><img src="{%static 'gym/img/kartavip_1920x804.jpg'%}" alt="#"></div>
+        <div class="description-second__sec">
+            <h1 class="desc-card__title">КАРТЫ «THE IMPERIA»</h1>
+            <p>Хотите вступить в клуб активных, позитивных и уверенных в себе людей? Тогда вам сюда! Выберите подходящее для вас членство в фитнес-клубе «THE IMPERIA».</p></div>
+    </section>
+
+
+
+
+    <section class="wrapper-ad">
+            <h2>КЛУБНАЯ КАРТА THE IMPERIA – ВАША ПРИВИЛЕГИЯ!</h2>
+            <p>Подробности уточняйте по телефону: +7 (4832) 30-36-07</p>
+    </section>
+
+
+    {%endblock content%}
+
+
+    {%block cards%}
+    <section class="main-container-card-sec">
+
+    {%for f in Member%}
+        <div class="container-card-sec">
+            <div class="title-card-sec">{{f.name}}</div>
+        {%if f.membership_photo%}
+            <div class="img-sec"><img src="{{f.membership_photo.url}}" alt="" srcset=""></div>
+        {%endif%}
+            <div class="price-list">{{f.price}}</div>
+            <div class="description-card-sec">{{f.desc_membership}}</div>
+            <div class="link-buy"><a href="#">Заказать карту</a></div>
+        </div>
+        
+    {%endfor%}
+
+
+    </section>
+    {%endblock%}

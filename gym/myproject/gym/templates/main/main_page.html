@@ -1,0 +1,138 @@
+{% extends "main/base.html" %}
+
+
+{%load static%}
+
+{% block headsection %}
+<section class="head-section">
+    <div class="intro">
+        <div class="videos">
+            <div class="video__media">
+               <video src="{% static 'gym/img/diplom-video-gym.mp4' %}" autoplay muted loop></video>
+           </div>
+       </div>
+          
+    </div>
+    
+    
+    
+    
+    
+    <div class="head-content">
+        <h1>ПУТЬ К СОВЕРШЕНСТВУ НАЧИНАЕТСЯ ЗДЕСЬ</h1>
+        <p>«THE IMPERIA» – это содружество активных, позитивных и 
+            уверенных в себе людей. Разнообразие тренировок и 
+            спортивных активностей впечатлит даже самого
+             искушенного поклонника фитнеса.
+        </p>
+        <div class="btns">
+            <a href="" class="btn">Запись к тренеру</a>
+            <a href="{% url 'cards' %}" class="btn">Выбрать карту</a>
+        </div>
+    </div>
+</section>
+
+<section class="section-public">
+    <div class="container-public">
+        <div class="public"><p class="title-public">
+            <strong>КОМАНДА ПРОФЕССИОНАЛОВ</strong></p>
+            <p class="desc-public">Наши тренеры – профессионалы своего дела. Они индивидуально подходят к работе с клиентом, что позволяет достичь целей в оптимальные сроки.</p>
+        </div>
+        <div class="public"><p class="title-public">
+            <strong>НОВЕЙШЕЕ ОБОРУДОВАНИЕ</strong></p>
+            <p class="desc-public">Залы оснащены новейшим оборудованием. Более 80 тренажеров дают возможность даже при полной загрузке зала заниматься с минимальным ожиданием.</p>
+        </div>
+        <div class="public">
+            <p class="title-public"><strong>ЦЕНТР ПРИТЯЖЕНИЯ</strong></p>
+            <p class="desc-public">Клуб расположен в центре города на 3-х этажах площадью более 3 500 м2. Здесь есть всё для совершенствования себя, подготовки к новым победам и релакса.                </p>
+        </div>
+    </div>
+</section>
+{% endblock  %}
+{%block cards%}
+
+<section class="card-section-ab">
+
+  <div class="cards-ab">
+    {%for p in cr%}
+      <a href="{{p.get_absolute_url}}" class="link-card-about">
+          <div class="card-ab">
+              <div class="card-image-ab">
+                {%if p.image%}
+                <img src="{{p.image.url}}" alt="Image">
+                {%endif%}
+                <div class="card-text-ab">
+                  <h3>{{p.title}}</h3>
+                  <p>{{p.description}}</p>
+                </div>
+              </div>
+            </div>
+      </a>
+      {%endfor%}
+    </div>
+
+
+
+</section>
+
+  
+ 
+
+
+
+</section>
+{%endblock%}
+
+{% block reception %}
+<section class="reception">
+    
+  <div class="reception-block">
+      
+
+      <div class="reception-subscribe">
+          <div class="reception-title">РЕСЕПШН</div>
+          <div class="reception-desc">«THE IMPERIA» – это место, которое лучше один раз увидеть. Клуб расположен в центре города на трех этажах площадью более 3 500 м3. Здесь каждый найдет себе занятие по душе!</div>
+      </div>
+          
+
+
+  </div>
+</section>
+{% endblock reception %}
+
+{% block trainers %}
+<section class="trainers-sec"><h2>Наш тренерский состав</h2>
+  <div class="trainers">
+
+      
+    <div class="cards-ab">
+        {%for tr in trainer%}
+          <a href="{{tr.get_absolute_url}}" class="link-card-about">
+              <div class="card-ab">
+                  <div class="card-image-ab">
+                    {%if tr.profile_photo%}
+                    <img src="{{tr.profile_photo.url}}" alt="Image">
+                    {%endif%}
+                    <div class="card-text-ab">
+                      <h3>{{tr.first_name}} {{tr.last_name}}</h3>
+                      <p>{{tr.classes_type}}</p>
+                    </div>
+                  </div>
+                </div>
+          </a>
+          {%endfor%}
+        </div>
+      
+  </div>
+</section>
+{% endblock trainers %}
+
+
+    
+
+
+            
+            
+   
+</body>
+</html>
